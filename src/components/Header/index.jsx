@@ -27,7 +27,7 @@ export default function Navbar() {
     <nav className="header-section">
       <div className="header-section__container">
         <div className="header-section__logo">
-          <img src={logo} className="header-section__logo__img" />
+          <img src={logo} className="header-section__logo__img" loading="lazy" />
         </div>
 
       <div className="header-section__extras">

@@ -2,7 +2,8 @@ import React from 'react';
 import Accordion from '../../src/components/Accordion';
 import Header from '../../src/components/Header';
 import Hero from '../../src/components/Hero';
-import Pricing from '../../src/components/Pricing/Pricing';
+import Pricing from '../../src/components/Pricing';
+import Contact from '../../src/components/Contact';
 import '../style/global.scss';
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
        <Hero />
        <Pricing />
        <Accordion />
+       <Contact />
     </div>
   )
 }
