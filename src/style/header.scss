@@ -1,37 +1,45 @@
-.navbar {
+.header-section {
   width: 100%;
   background: #fff;
-  padding: 1rem 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 50;
 
-  .navbar-inner {
+  &__logo {
+    width: 160px !important;
+    height: 123px !important;
+
+    &__img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: contain;
+    }
+  }
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    background-color: #ffffff;
+    background-color: #ffffff;
+    padding: 7px 10px;
   }
 
-  .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0b74de;
-    text-decoration: none;
-  }
-
-  .nav-links {
+  &__links {
     display: flex;
-    list-style: none;
     gap: 1.5rem;
+    list-style: none;
 
-    li a {
+    &__title {
       text-decoration: none;
       color: #111;
       transition: 0.2s;
+      font-weight: 400;
+      font-size: 14px;
+
       &:hover {
         color: #0b74de;
       }
@@ -39,59 +47,40 @@
 
     @media (max-width: 768px) {
       position: absolute;
-      top: 64px;
+      top: 70px;
       left: 0;
       right: 0;
-      background: #fff;
       flex-direction: column;
-      width: 100%;
-      padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-
+      background: #fff;
+      padding: 1.5rem 1rem;
       transform: translateY(-200%);
       transition: transform 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 
       &.active {
         transform: translateY(0);
+        margin-block: 40px 0px;
       }
 
       li {
-        margin-bottom: 1rem;
+        padding: 0.5rem 0;
       }
     }
   }
 
-  .hamburger {
+  &__hamburger {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25px;
-    height: 20px;
     background: none;
     border: none;
+    font-size: 1.9rem;
     cursor: pointer;
 
-    span {
-      display: block;
-      height: 3px;
-      width: 100%;
-      background: #111;
-      border-radius: 2px;
-      transition: 0.3s;
-    }
-
-    &.open span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-    }
-    &.open span:nth-child(2) {
-      opacity: 0;
-    }
-    &.open span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-    }
-
     @media (max-width: 768px) {
-      display: flex;
+      display: block;
+    }
+
+    &__icon {
+      font-size: 25px;
     }
   }
 }
