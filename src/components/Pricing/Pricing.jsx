@@ -17,9 +17,9 @@ function Pricing() {
         {plans.map((p, i) => (
           <div className="pricing-section__item" key={i}>
             <h3 className='pricing-section__item__title'>{p.name}</h3>
-            <p className='pricing-section__item__desc'>{p.price}</p>
+            <p className='pricing-section__item__price'>{p.price}</p>
             <ul className='pricing-section__item__info'>
-              {p.features.map((f, i2) => <li key={i2}>{f}</li>)}
+              {p.features.map((f, i2) => <li className='pricing-section__item__txt' key={i2}>{f}</li>)}
             </ul>
             <button className='pricing-section__item__btn'>Satın Al</button>
           </div>

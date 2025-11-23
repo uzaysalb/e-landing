@@ -1,6 +1,5 @@
-
-// components/FAQ.jsx
 import { useState } from "react";
+import '../../style/accordion.scss';
 
 export default function Accordion() {
   const items = [
@@ -12,23 +11,21 @@ export default function Accordion() {
   const [open, setOpen] = useState(null);
 
   return (
-    <section style={{ padding: "60px 20px" }}>
-      <h2>Sık Sorulan Sorular</h2>
-
+    <section className="accordion-section">
+      <div className="accordion-section__top">
+      <h2 className="accordion-section__title">Sık Sorulan Sorular</h2>
+      </div>
       {items.map((item, index) => (
-        <div key={index} style={{
-          borderBottom: "1px solid #ccc",
-          padding: "10px 0"
-        }}>
+        <div className="accordion-section__table" key={index}>
           <div
             onClick={() => setOpen(open === index ? null : index)}
-            style={{ cursor: "pointer", fontWeight: "bold" }}
+            className="accordion-section__item"
           >
             {item.q}
           </div>
 
           {open === index && (
-            <p style={{ marginTop: "8px" }}>{item.a}</p>
+            <p className="accordion-section__desc">{item.a}</p>
           )}
         </div>
       ))}

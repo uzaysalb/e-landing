@@ -1,0 +1,35 @@
+.accordion-section {
+  max-width: 1200px !important;
+  padding-inline: 40px;
+  margin-block: 20px 40px;
+  background-color: #fffffe;
+
+  &__table {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    margin-block: 10px 0px
+  }
+
+  &__title {
+    margin: 0px !important;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+  }
+
+  &__item {
+    cursor: pointer;
+    color: #0056ac;
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+
+@media screen and (min-width:768px) {
+ .accordion-section {
+    &__item {
+        font-size: 18px;
+    }
+ }
+}

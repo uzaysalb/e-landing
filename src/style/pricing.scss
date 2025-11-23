@@ -1,27 +1,75 @@
 .pricing-section {
   max-width: 1200px !important;
   padding-inline: 40px;
-  margin-block: 20px 10px;
+  margin-block: 30px 10px;
   background-color: #fffffe;
 
   &__table {
     display: grid;
     grid-template-columns: (1fr);
-    padding: 20px;
     border-radius: 10px;
     gap: 15px;
   }
 
-  &__item {
-     background-color: #fffffe;
-     padding: 5px 7px;
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+  }
 
-     &__title {
+  &__item {
+    background-color: #fffffe;
+    padding: 16px;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+
+    &:hover {
+      border: 1px solid #0056ac;
+    }
+
+    &__info {
+      list-style: none !important;
+      padding: 0px !important;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    &__txt {
+      color: #000000;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    &__title {
       color: #000000;
       font-weight: 700;
       font-size: 18px;
       margin: 0px !important;
-     }
+    }
+
+    &__price {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0056ac;
+      margin: 7px 0px;
+    }
+
+    &__btn {
+      background-color: #0056ac;
+      border: none !important;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 14px;
+      border-radius: 30px;
+      padding: 10px 20px;
+      cursor: pointer;
+      min-width: 100px !important;
+
+      &:hover {
+        background-color: #000000;
+      }
+    }
   }
 }
 
