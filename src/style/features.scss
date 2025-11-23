@@ -13,24 +13,34 @@
     text-align: start;
     font-size: 16px;
     font-weight: 700;
-      color: var(--text-color);
+    color: var(--text-color);
     margin: 0px !important;
   }
 
   &__table {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-block: 20px 10px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
     &__title {
       font-weight: 600;
       color: var(--text-color);
       font-size: 14px;
+      margin: 0px !important;
     }
 
     &__desc {
       font-weight: 400;
       color: var(--text-color);
       font-size: 12px;
+      margin: 0px !important;
     }
   }
 }

@@ -1,5 +1,4 @@
 .pricing-section {
-  max-width: 1200px !important;
   padding-inline: 40px;
   margin-block: 30px 10px;
   background: var(--bg-color);
@@ -15,7 +14,7 @@
   &__title {
     font-size: 18px;
     font-weight: 700;
-      color: var(--text-color);
+    color: var(--text-color);
   }
 
   &__item {
@@ -78,6 +77,12 @@
   .pricing-section {
     &__table {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+      &__btn {
+        min-width: 130px !important;
+      }
     }
   }
 }

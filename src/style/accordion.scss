@@ -1,5 +1,4 @@
 .accordion-section {
-  max-width: 1200px !important;
   padding-inline: 40px;
   margin-block: 30px 40px;
   background: var(--bg-color);
@@ -13,7 +12,7 @@
     margin: 0px !important;
     font-size: 18px;
     font-weight: 700;
-      color: var(--text-color);
+    color: var(--text-color);
   }
 
   &__item {
