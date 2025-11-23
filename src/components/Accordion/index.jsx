@@ -16,16 +16,16 @@ export default function Accordion() {
       <h2 className="accordion-section__title">Sık Sorulan Sorular</h2>
       </div>
       {items.map((item, index) => (
-        <div className="accordion-section__table" key={index}>
+        <div className="accordion-section__item" key={index}>
           <div
             onClick={() => setOpen(open === index ? null : index)}
-            className="accordion-section__item"
+            className="accordion-section__item__title"
           >
             {item.q}
           </div>
 
           {open === index && (
-            <p className="accordion-section__desc">{item.a}</p>
+            <p className="accordion-section__item__desc">{item.a}</p>
           )}
         </div>
       ))}

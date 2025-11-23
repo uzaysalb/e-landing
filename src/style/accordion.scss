@@ -4,10 +4,8 @@
   margin-block: 20px 40px;
   background-color: #fffffe;
 
-  &__table {
-    border-bottom: 1px solid #ccc;
-    padding: 5px 0;
-    margin-block: 10px 0px
+  &__top {
+    margin-block: 0 10px;
   }
 
   &__title {
@@ -18,18 +16,32 @@
   }
 
   &__item {
-    cursor: pointer;
-    color: #0056ac;
-    font-weight: 400;
-    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      cursor: pointer;
+      color: #0056ac;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    &__desc {
+      font-size: 14px;
+      font-weight: 400;
+      color: #000000;
+      margin: 0px !important;
+    }
   }
 }
 
-
-@media screen and (min-width:768px) {
- .accordion-section {
+@media screen and (min-width: 768px) {
+  .accordion-section {
     &__item {
-        font-size: 18px;
+      font-size: 18px;
     }
- }
+  }
 }
