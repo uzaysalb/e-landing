@@ -44,46 +44,59 @@ export default function ContactForm() {
 
   return (
     <div className="contact-section">
-        <div className="contact-section__top">
-      <h2 className="contact-section__title">İletişim Formu</h2>
-        </div>
-      <form className="contact-section__form" onSubmit={handleSubmit} noValidate>
+      <div className="contact-section__top">
+        <h2 className="contact-section__title">İletişim Formu</h2>
+      </div>
+      <form
+        className="contact-section__form"
+        onSubmit={handleSubmit}
+        noValidate
+      >
         <div className="contact-section__form__item">
-          <label className="contact-section__form__key">Ad:</label>
+          <label htmlFor="name" className="contact-section__form__key">Ad:</label>
           <input
             type="text"
+            id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
             placeholder="Adınızı girin"
             className="contact-section__form__value"
+            aria-invalid={errors.name ? "true" : "false"}
+            aria-describedby={errors.name ? "name-error" : undefined}
           />
-          {errors.name && <span className="contact-section__form__error">{errors.name}</span>}
+          {errors.name && <span id="name-error" className="contact-section__form__error">{errors.name}</span>}
         </div>
 
         <div className="contact-section__form__item">
-          <label className="contact-section__form__key">E-posta:</label>
+          <label htmlFor="email" className="contact-section__form__key">E-posta:</label>
           <input
             type="email"
+            id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             placeholder="E-posta adresiniz"
             className="contact-section__form__value"
+            aria-invalid={errors.email ? "true" : "false"}
+            aria-describedby={errors.email ? "email-error" : undefined}
           />
-          {errors.email && <span className="contact-section__form__error">{errors.email}</span>}
+          {errors.email && <span id="email-error" className="contact-section__form__error">{errors.email}</span>}
         </div>
 
         <div className="contact-section__form__item">
-          <label className="contact-section__form__key">Mesaj:</label>
+          <label htmlFor="message" className="contact-section__form__key">Mesaj:</label>
           <textarea
+            id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
             placeholder="Mesajınızı yazın"
             className="contact-section__form__value"
+            aria-invalid={errors.message ? "true" : "false"}
+            aria-describedby={errors.message ? "message-error" : undefined}
           />
-          {errors.message && <span className="contact-section__form__error">{errors.message}</span>}
+          {errors.message && <span id="message-error" className="contact-section__form__error">{errors.message}</span>}
         </div>
 
         <button className="contact-section__form__btn" type="submit">Gönder</button>
