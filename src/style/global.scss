@@ -1,0 +1,21 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --card-bg: #f8f8f8;
+  --border-color: #e5e7eb;
+  --menu-bg: #ffffff;
+}
+
+.dark-mode {
+  --bg-color: #111827;
+  --text-color: #f3f4f6;
+  --card-bg: #1f2937;
+  --border-color: #374151;
+  --menu-bg: #1f2937;
+}
+
+/* Tüm sayfa body */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}

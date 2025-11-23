@@ -2,7 +2,8 @@
   max-width: 1200px !important;
   padding-inline: 40px;
   margin-block: 30px 10px;
-  background-color: #fffffe;
+  background: var(--bg-color);
+  box-shadow: 0 2px 6px var(--shadow-color);
 
   &__table {
     display: grid;
@@ -14,11 +15,11 @@
   &__title {
     font-size: 18px;
     font-weight: 700;
-    color: #000000;
+      color: var(--text-color);
   }
 
   &__item {
-    background-color: #fffffe;
+    background: var(--bg-color);
     padding: 16px;
     border: 1px solid #cecece;
     border-radius: 10px;
@@ -36,13 +37,13 @@
     }
 
     &__txt {
-      color: #000000;
+      color: var(--text-color);
       font-weight: 500;
       font-size: 14px;
     }
 
     &__title {
-      color: #000000;
+      color: var(--text-color);
       font-weight: 700;
       font-size: 18px;
       margin: 0px !important;
@@ -51,14 +52,14 @@
     &__price {
       font-size: 18px;
       font-weight: 700;
-      color: #0056ac;
+      color: var(--text-color);
       margin: 7px 0px;
     }
 
     &__btn {
       background-color: #0056ac;
       border: none !important;
-      color: #ffffff;
+      color: #fffffe;
       font-weight: 400;
       font-size: 14px;
       border-radius: 30px;
@@ -67,7 +68,7 @@
       min-width: 100px !important;
 
       &:hover {
-        background-color: #000000;
+        background-color: #004ddc;
       }
     }
   }
